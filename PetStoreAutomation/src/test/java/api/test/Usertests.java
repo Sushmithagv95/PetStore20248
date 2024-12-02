@@ -41,9 +41,11 @@ public class Usertests {
 	@Test(priority=2)
 	public void testGetUser()
 	{
+		System.out.println("Pushed Again");
 		Response response=UserEndPoints.ReadUser(this.userPayload.getUsername());
 		response.then().log().all();
 		Assert.assertEquals(response.getStatusCode(),200);
+		
 
 	}
 	@Test(priority=3)
